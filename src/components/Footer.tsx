@@ -1,7 +1,12 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const services = [
     "Critical Care Nursing",
     "Elder Care",
@@ -17,7 +22,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
+            <button onClick={() => scrollToSection("home")} className="flex items-center space-x-2 mb-4 hover:opacity-80 transition-smooth">
               <div className="w-10 h-10 gradient-hero rounded-full flex items-center justify-center">
                 <span className="text-xl font-bold text-primary-foreground">Ω</span>
               </div>
@@ -25,7 +30,7 @@ const Footer = () => {
                 <h3 className="font-bold text-lg">Omega</h3>
                 <p className="text-xs text-muted-foreground">Home Nursing Care</p>
               </div>
-            </div>
+            </button>
             <p className="text-sm text-muted-foreground mb-4">
               Providing compassionate and professional home nursing care services in Coimbatore and nearby cities.
             </p>
@@ -64,24 +69,24 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <button onClick={() => scrollToSection("home")} className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Home
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <button onClick={() => scrollToSection("about")} className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <button onClick={() => scrollToSection("services")} className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Our Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                <button onClick={() => scrollToSection("contact")} className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                   Contact Us
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -92,9 +97,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                  <button onClick={() => scrollToSection("services")} className="text-sm text-muted-foreground hover:text-primary transition-smooth">
                     {service}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>

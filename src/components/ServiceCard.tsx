@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -11,6 +10,12 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, image }: ServiceCardProps) => {
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Card className="overflow-hidden shadow-soft hover:shadow-hover transition-smooth group">
       {image && (
@@ -29,8 +34,8 @@ const ServiceCard = ({ icon: Icon, title, description, image }: ServiceCardProps
         </div>
         <h3 className="font-semibold text-xl mb-2">{title}</h3>
         <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{description}</p>
-        <Button variant="outline" size="sm" asChild className="w-full">
-          <Link to="/contact">Request Service</Link>
+        <Button variant="outline" size="sm" onClick={scrollToContact} className="w-full">
+          Request Service
         </Button>
       </CardContent>
     </Card>
