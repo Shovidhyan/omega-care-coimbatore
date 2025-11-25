@@ -35,6 +35,18 @@ import criticalCareImage from "@/assets/critical-care.jpg";
 import elderlyCareImage from "@/assets/elderly-care.jpg";
 import physiotherapyImage from "@/assets/physiotherapy.jpg";
 import babyCareImage from "@/assets/baby-care.jpg";
+import Tracheostomy from "@/assets/Tracheostomy Care.jpg";
+import Postsurgerycareimage from "@/assets/Post-Surgery Care.jpg";
+import Poststrokerehabilition from "@/assets/Post-Stroke Rehabilitation.jpg";
+import AttenderCare from "@/assets/Attender Care.png";
+import RylesTubeCare from "@/assets/Ryles-Tube-Insertion.jpg";
+import CatheterCare from "@/assets/Catheter Care.jpg";
+import HouseMaid from "@/assets/House Maid Services.jpeg";
+import cookingServicesImage from "@/assets/Cooking Services.jpg";
+
+
+
+
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -80,19 +92,22 @@ const Index = () => {
       title: "Tracheostomy Care",
       description:
         "Specialized care for patients with tracheostomy tubes, including cleaning, suctioning, and emergency management by trained professionals.",
-    },
+      image: Tracheostomy,
+      },
     {
       icon: Scissors,
       title: "Post-Surgery Care",
       description:
         "Comprehensive post-operative care including wound management, pain control, medication administration, and recovery monitoring.",
-    },
+    image: Postsurgerycareimage,
+      },
     {
       icon: Brain,
       title: "Post-Stroke Rehabilitation",
       description:
         "Dedicated rehabilitation support focusing on mobility, speech, and daily activities to help stroke survivors regain independence.",
-    },
+    image: Poststrokerehabilition,
+      },
     {
       icon: Users,
       title: "Elder / Senior Citizen Care",
@@ -105,19 +120,22 @@ const Index = () => {
       title: "Attender Care",
       description:
         "Professional attendants to assist with patient mobility, personal hygiene, feeding, and providing companionship throughout the day.",
-    },
+    image: AttenderCare,
+      },
     {
       icon: Droplet,
       title: "Ryles Tube Care",
       description:
         "Expert management of nasogastric feeding tubes including insertion, feeding administration, and maintenance with proper hygiene.",
-    },
+    image: RylesTubeCare,
+      },
     {
       icon: Droplets,
       title: "Catheter Care",
       description:
         "Professional urinary catheter management including insertion, maintenance, and infection prevention with strict hygiene protocols.",
-    },
+    image: CatheterCare,
+      },
     {
       icon: Baby,
       title: "Baby Care",
@@ -130,13 +148,15 @@ const Index = () => {
       title: "House Maid Services",
       description:
         "Reliable housekeeping support to maintain a clean and healthy home environment, allowing families to focus on patient care.",
-    },
+    image: HouseMaid,
+      },
     {
       icon: ChefHat,
       title: "Cooking Services",
       description:
         "Nutritious meal preparation tailored to dietary requirements and medical conditions, ensuring patients receive proper nutrition.",
-    },
+    image: cookingServicesImage,
+      },
     {
       icon: Dumbbell,
       title: "Physiotherapy",
@@ -255,7 +275,7 @@ const Index = () => {
                 onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
                 className="group"
               >
-                Book a Nurse Now
+                Book an appointment Now
                 <ArrowRight className="ml-2 w-5 h-5 transition-smooth group-hover:translate-x-1" />
               </Button>
               <Button size="lg" variant="outline" asChild>
@@ -571,16 +591,18 @@ const Index = () => {
           <div>
             <h3 className="text-3xl font-bold mb-8 text-center">Find Us on Map</h3>
             <div className="max-w-5xl mx-auto rounded-xl overflow-hidden shadow-soft">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2615873015985!2d76.95815731464087!3d11.016434992154836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Omega Home Nursing Care Location"
-              ></iframe>
+          <iframe
+  src="https://www.google.com/maps?q=11.0848695,76.9337767&z=17&hl=en&output=embed"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Omega Home Nursing Care Location"
+/>
+
+
             </div>
           </div>
         </div>
