@@ -29,20 +29,20 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyContactButton from "@/components/StickyContactButton";
-import ServiceCard from "@/components/ServiceCard";
-import heroImage from "@/assets/hero-nursing.jpg";
-import criticalCareImage from "@/assets/critical-care.jpg";
-import elderlyCareImage from "@/assets/elderly-care.jpg";
-import physiotherapyImage from "@/assets/physiotherapy.jpg";
-import babyCareImage from "@/assets/baby-care.jpg";
-import Tracheostomy from "@/assets/Tracheostomy Care.jpg";
-import Postsurgerycareimage from "@/assets/Post-Surgery Care.jpg";
-import Poststrokerehabilition from "@/assets/Post-Stroke Rehabilitation.jpg";
-import AttenderCare from "@/assets/Attender Care.png";
-import RylesTubeCare from "@/assets/Ryles-Tube-Insertion.jpg";
-import CatheterCare from "@/assets/Catheter Care.jpg";
-import HouseMaid from "@/assets/House Maid Services.jpeg";
-import cookingServicesImage from "@/assets/Cooking Services.jpg";
+import ServiceCard from "../components/ServiceCard";
+import heroImage from "../assets/hero-nursing.jpg";
+import criticalCareImage from "../assets/critical-care.jpg";
+import elderlyCareImage from "../assets/elderly-care.jpg";
+import physiotherapyImage from "../assets/physiotherapy.jpg";
+import babyCareImage from "../assets/baby-care.jpg";
+import Tracheostomy from "../assets/Tracheostomy Care.jpg";
+import Postsurgerycareimage from "../assets/Post-Surgery Care.jpg";
+import Poststrokerehabilition from "../assets/Post-Stroke Rehabilitation.jpg";
+import AttenderCare from "../assets/Attender Care.png";
+import RylesTubeCare from "../assets/Ryles-Tube-Insertion.jpg";
+import CatheterCare from "../assets/Catheter Care.jpg";
+import HouseMaid from "../assets/House Maid Services.jpeg";
+import cookingServicesImage from "../assets/Cooking Services.jpg";
 
 
 
